@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:greengrocer/src/home/home_tap.dart';
+import 'package:greengrocer/src/pages/home/home_tap.dart';
 
 class BaseScreen extends StatefulWidget {
   const BaseScreen({super.key});
@@ -21,7 +21,7 @@ class _BaseScreenState extends State<BaseScreen> {
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         children: [
-          HomeTap(),
+          const HomeTap(),
           Container(color: Colors.yellow),
           Container(color: Colors.blue),
           Container(color: Colors.purple),
