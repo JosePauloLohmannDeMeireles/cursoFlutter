@@ -8,7 +8,7 @@ class ProductScreen extends StatefulWidget {
 
   final ItemModel item;
 
-  ProductScreen({super.key, required this.item});
+  const ProductScreen({super.key, required this.item});
 
   @override
   State<ProductScreen> createState() => _ProductScreenState();
