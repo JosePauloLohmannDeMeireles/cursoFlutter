@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:greengrocer/src/pages/common_widgets/app_name_widget.dart';
 import 'package:greengrocer/src/pages/common_widgets/custom_text_field.dart';
 import 'package:greengrocer/src/pages/base/base_screen.dart';
 import 'package:greengrocer/src/config/custom_colors.dart';
@@ -25,28 +26,10 @@ class SignInScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text.rich(
-                        TextSpan(
-                          style: const TextStyle(
-                            fontSize: 40,
-                          ), 
-                          children: [
-                            const TextSpan(
-                              text: 'Green',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold
-                              ),
-                            ),
-                            TextSpan(
-                              text: 'grocer',
-                              style: TextStyle(
-                                color: CustomColors.customContrastColor,
-                              ),
-                            )
-                          ],
-                        )
-                      ),
+                    const AppNameWidget(
+                      greenTitleColor: Colors.white, 
+                      textSize: 40,
+                    ),
                     
                     SizedBox(
                       height: 30,
@@ -173,7 +156,7 @@ class SignInScreen extends StatelessWidget {
                             }),
                           );
                         }, 
-                        child: const Text('Criar conta', style: TextStyle(fontSize: 18),)
+                        child: const Text('Criar conta', style: TextStyle(fontSize: 18, color: Colors.green),)
                       ),
                     ),
               
