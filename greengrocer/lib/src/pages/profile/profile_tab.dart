@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:greengrocer/src/pages/auth/controller/auth_controller.dart';
 import 'package:greengrocer/src/pages/common_widgets/custom_text_field.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:greengrocer/src/config/app_data.dart' as app_data;
@@ -11,6 +13,9 @@ class ProfileTab extends StatefulWidget {
 }
 
 class _ProfileTabState extends State<ProfileTab> {
+
+  final authController = Get.find<AuthController>();
+
   final cpfFormatter = MaskTextInputFormatter(
     mask: '###.###.###-##',
     filter: {'#': RegExp( r'[0-9]' )}
@@ -32,7 +37,9 @@ class _ProfileTabState extends State<ProfileTab> {
         ),
         actions: [
           IconButton(
-            onPressed: () {}, 
+            onPressed: () {
+              authController.singOut();
+            }, 
             icon: const Icon(Icons.logout)
           )
         ],
